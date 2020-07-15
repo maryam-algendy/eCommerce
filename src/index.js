@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import Portal from "./Portal";
 import * as serviceWorker from './serviceWorker';
+
+// global style
+import 'bootstrap-v4-rtl/dist/css/bootstrap-rtl.min.css';
+import '@fortawesome/fontawesome-free/css/all.css';
+import './Layout/components/style/Main.scss';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Portal />
   </React.StrictMode>,
   document.getElementById('root')
 );
