@@ -47,7 +47,7 @@ export default Demo;
 ```
 
 ## Setup
-To run this project, install it locally using npm:
+To run this project, install it locally using [Yarn](https://classic.yarnpkg.com/en/docs/install/#debian-stable):
 
 ```
 $ cd ../react-core 
