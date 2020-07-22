@@ -1,5 +1,5 @@
 import React from 'react';
-import Cart from "./Blocks/CartBlock";
+import Cart from "./Blocks/Cart";
 import {Navbar,Button,Image} from 'react-bootstrap';
 
 
@@ -36,8 +36,8 @@ class navbar extends React.Component{
                 </div>
                 </Navbar.Collapse>
                 <div className="nav-icons">
-                        <Button><i className="far fa-user"></i></Button>
-                        <Button className="cart-sec"><i className="fas fa-shopping-bag"></i> <Cart/></Button> 
+                        <Button><Image src="user-icon.png"/></Button>
+                        <Button className="cart-sec"><Image src="cart-icon.png"/><span className="cart-num">0</span><Cart/></Button> 
                     </div>
             </Navbar>
             </div>

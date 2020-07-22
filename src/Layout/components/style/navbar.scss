@@ -10,15 +10,16 @@
         .navbar-expand-lg .navbar-collapse {
             display: block!important;
         }}
-        .navbar-light .navbar-toggler-icon {
-            &:hover{
-            background-image: url("out.svg");
-        }}
+
         .navbar-light .navbar-toggler {
             border: none;
             &:focus{
                 border: none;
                 outline: none;
+            }
+            &:focus .navbar-toggler-icon{
+                background-image: url("out.svg");
+
             }
         }
     
@@ -95,7 +96,9 @@
     .col-lg-11 {
         padding: 0;
         Button{
+            border-bottom: 1px solid #fff;
             @media  (max-width:992px) {
+                border-bottom: none;
                 color: #fff;
                 display: block;
                 width: 100%;
@@ -125,7 +128,8 @@
         padding-left: 10px;
         padding: 10px;
 
-        Button{
+        Button{        
+            border-bottom: none;
             background-color: transparent;
             color: #fff;
             padding: 10px;
@@ -218,11 +222,23 @@
 
     .cart-sec
      {
+
+        .cart-num{
+            position: absolute;
+            font-size: 14px;
+            background: #000;
+            color: white;
+            padding: 5px;
+            border-radius: 50%;
+            line-height: .5;
+            left: 15px;
+                 }
          &:focus .cart{
              display: block;
              transition: .3s ease-in-out;
          }
     }
+
 
 }
 
