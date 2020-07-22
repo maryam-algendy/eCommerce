@@ -69,6 +69,9 @@
             font-weight: 700;
             opacity: 0;
             text-transform: uppercase;
+            @media (max-width:768px) {
+                font-size: 40px;
+            }
 
         }
         Button{
