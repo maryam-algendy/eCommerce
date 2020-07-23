@@ -8,7 +8,7 @@ class navbar extends React.Component{
         return (
             // upper nav bar
             <div className="main-nav">
-                <Navbar sticky="top" expand="lg" className="px-lg-5 pb-0 pt-2 py-lg-3">
+                <Navbar fixed="top" expand="lg" className="px-lg-5 pb-0 pt-2 py-lg-3">
                 <Navbar.Brand href="/"><Image className="pl-3" src="logo.png"/></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
