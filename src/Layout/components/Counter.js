@@ -1,6 +1,23 @@
 import React from "react";
 import {Image,Button} from "react-bootstrap";
+import Countdown from "react-countdown";
 
+
+const countDownDate = new Date("october 1, 2020 00:00:00").getTime();
+const now = new Date().getTime();
+
+const renderer1 = ({days}) => {
+    return<span>{days}</span>
+    }
+    const renderer2 = ({hours}) => {
+        return<span>{hours}</span>
+        }
+        const renderer3 = ({minutes}) => {
+            return<span>{minutes}</span>
+            }
+            const renderer4 = ({seconds}) => {
+                return<span>{seconds}</span>
+                }
 
 
 class Counter extends React.Component{
@@ -25,19 +42,19 @@ class Counter extends React.Component{
                                 <span className="cost">$15.90</span>
                                 <div className="row pt-5">
                                 <div className="col-3 day">
-                                        <span>10</span>
+                                <Countdown date={Date.now() +( countDownDate-now)} renderer={renderer1}  />
                                         <p>days</p>
                                     </div>
                                     <div className="col-3 hr">
-                                        <span>20</span>
+                                    <Countdown date={Date.now() +( countDownDate-now)} renderer={renderer2}  />
                                         <p>hrs</p>
                                     </div>
                                     <div className="col-3 min">
-                                        <span>10</span>
+                                    <Countdown date={Date.now() +( countDownDate-now)} renderer={renderer3}  />
                                         <p>mins</p>
                                     </div>
                                     <div className="col-3 sec">
-                                        <span>10</span>
+                                       <Countdown date={Date.now() +( countDownDate-now)} renderer={renderer4}  />
                                         <p>secs</p>
                                     </div>
                                 </div>
@@ -52,3 +69,8 @@ class Counter extends React.Component{
 }
 
 export default Counter;
+
+
+
+
+
