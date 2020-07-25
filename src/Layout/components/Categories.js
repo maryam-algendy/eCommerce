@@ -37,14 +37,14 @@ class Categories extends React.Component{
             {
                 cats.map((cat,id)=>{
                     return(
-                        <div key={id} class={cat.class}>
+                        <div key={id} className={cat.class}>
                     <Image src={cat.link}/>
                     <Button>{cat.btn}</Button>
                 </div>
                     )
                 })
             }
-                <div class="item-6 text-center">
+                <div className="item-6 text-center">
                     <div>
                         <h4>sign up & get 20% off</h4>
                         <p>Be the frist to know about the latest fashion news and get exclu-sive offers</p>
