@@ -1,0 +1,63 @@
+.shipping{
+
+    max-width: 90%;
+
+
+    .none{
+        display: none;
+    }
+
+
+    p{
+        font-size: 13px;
+        color: #888888;
+    }
+    h4{
+        margin: 0;
+        font-size: 18px;
+        line-height: 1.5;
+        color: #555555;
+        text-transform: capitalize;
+    }
+
+    .col-sm-4:nth-child(1),
+    .col-sm-4:nth-child(2){
+        border-bottom:1px #d3d0d0 solid ;
+
+        @media (min-width:600px) {
+            border-right: 1px #d3d0d0 solid;
+            border-bottom: none;
+
+        }
+    }
+
+
+
+.btn-primary
+      {
+          font-size: 13px;
+          background-color:transparent;
+          border: none;
+          color: #888888;
+          border-radius: 0;
+          padding: 0;
+          &:hover{
+              border: none;
+              background-color: transparent;
+              transition: .2s ease-in-out;
+          }
+          &:active{
+              background-color:transparent;
+              box-shadow: none;
+  
+          }
+          &:focus{
+              box-shadow: none;
+          }
+      }
+      .btn-primary:not(:disabled):not(.disabled):active{
+          border: none;
+          box-shadow: none;
+          background-color: transparent;
+      }
+}
