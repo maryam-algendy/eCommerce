@@ -40,7 +40,7 @@ class Counter extends React.Component{
                                 <Button>Gafas sol Hawkers one</Button>
                                 <del>$29.50</del>
                                 <span className="cost">$15.90</span>
-                                <div className="row pt-5">
+                                <div className="row pt-0 pt-md-5">
                                 <div className="col-3 day">
                                 <Countdown date={Date.now() +( countDownDate-now)} renderer={renderer1}  />
                                         <p>days</p>

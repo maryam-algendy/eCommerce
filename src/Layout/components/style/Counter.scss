@@ -43,6 +43,9 @@ padding: 64px 0;
 
 
     .lhs {
+        @media (max-width:992px) {
+            margin-bottom: 30px;
+        }
 
         .desc{
             color: #fff;

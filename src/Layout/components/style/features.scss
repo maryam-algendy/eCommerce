@@ -1,0 +1,187 @@
+@import "react-alice-carousel/lib/scss/alice-carousel.scss";
+
+.feature-item{
+    img{
+        width: 100%;
+    }
+    .btn-primary
+      {
+          background-color:#111111;
+          border: none;
+          color: #fff;
+          border-radius: 23px;
+          text-transform: uppercase;
+          padding: 10px 25px;
+          &:hover{
+              border: none;
+              background-color: #e65540;
+              color: #fff;
+              transition: .2s ease-in-out;
+
+          }
+          &:active{
+              background-color:#e65540;
+              box-shadow: none;
+  
+          }
+          &:focus{
+              box-shadow: none;
+          }
+      }
+      .btn-primary:not(:disabled):not(.disabled):active{
+          border: none;
+          box-shadow: none;
+          background-color: #e65540;
+      }
+
+    .img-side{
+        position: relative;
+        overflow: hidden;
+        .overlay{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0,.3);
+            top: 0;
+            display: none;
+        }
+        Button{
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            opacity: 0;
+            bottom: -40px;
+            
+        }
+        span{
+            position: absolute;
+            z-index: 3;
+            top:10px;
+            left: 10px;
+            font-size: 12px;
+            padding: 5px 15px;
+            border-radius: 10px;
+            background-color: #66a8a6;
+            color: #fff;
+            letter-spacing: 1px;
+            text-transform: capitalize;
+        }
+        .sale{
+            background-color: #e65540;
+        }
+        .none{
+            display: none;
+        }
+
+        i{
+            position: absolute;
+            z-index: 3;
+            top:10px;
+            right: 10px;  
+            display: none;
+            color: #fff;
+        }
+
+        &:hover Button{
+            animation: btn .5s forwards;
+            transition: .3s ease-in-out;
+        }
+        &:hover .overlay{
+            display: block;
+            transition: .3s ease-in-out;
+
+        }
+        &:hover i{
+            display: block;
+            transition: .3s ease-in-out;
+
+        }
+    }
+
+    .desc{
+        color: #555555;
+        letter-spacing: 1px;
+        .delClass{
+            margin-left: 5px;
+            color: #e65540;
+        }
+        button{
+            background-color: #fff;
+            color: #555555;
+            border-radius: 0;
+            padding: 0;
+            display: block;
+            text-transform: none;
+            margin-bottom: 5px;
+            margin-top: 20px;
+            &:hover{
+                color: #e65540;
+                background-color: #fff;
+                transition: .2s ease-in-out;
+    
+            }
+            &:active{
+                background-color:#fff !important;
+                color: #e65540 !important;
+
+            }
+            .btn-primary:not(:disabled):not(.disabled):active{
+                background-color: #fff;
+                color: #e65540;
+            
+            }
+        }
+    
+    }
+
+    @keyframes btn {
+        0%   {
+            opacity: 0;
+            bottom: -40px;
+        }
+        100% {
+            opacity: 1;
+            bottom: 20px;
+
+        }
+      }
+
+    
+}
+.alice-carousel__dots{
+    display: none;
+}
+.alice-carousel__prev-btn{
+    position: absolute;
+    top: 35%;
+    text-align: left;
+    left: -40px;
+}
+.alice-carousel__next-btn{
+    position: absolute;
+    top: 35%;
+    text-align: right;
+    right: -45px;
+}
+
+.alice-carousel__prev-btn-item{
+    color: transparent;
+    background: url("prev.svg") no-repeat;
+    opacity: .3;
+    &:hover{
+        color:transparent;
+        opacity: .7;
+        transition: .3s ease-in-out;
+    }
+}
+.alice-carousel__next-btn-item{
+    color: transparent;
+    background: url("next.svg") no-repeat;
+    opacity: .3;
+    &:hover{
+        color:transparent;
+        opacity: .7;
+        transition: .3s ease-in-out;
+    }
+}
