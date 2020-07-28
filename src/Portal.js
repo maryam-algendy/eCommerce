@@ -5,6 +5,7 @@ import Categories from "./Layout/components/Categories";
 import Counter from "./Layout/components/Counter";
 import Features from "./Layout/components/Features"
 import Shipping from './Layout/components/shipping';
+import Footer from './Layout/components/Footer';
 
 function Portal() {
   return (
@@ -15,6 +16,7 @@ function Portal() {
       <Counter/>
       <Features/>
       <Shipping/>
+      <Footer/>
     </div>
   );
 }
