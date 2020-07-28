@@ -1,0 +1,123 @@
+.footer{
+    background-color: #f0f0f0;
+    padding: 80px 48px;
+
+    .col-lg-2 {
+        @media (min-width: 992px){
+        flex: 0 0 13%;
+        max-width: 13%;
+        }
+    }
+    .col-lg-3 {
+        @media (min-width: 992px){
+            flex: 0 0 28%;
+            max-width: 28%;
+        }
+    }
+    .col-lg-4 {
+        @media (min-width: 992px){
+            flex: 0 0 33%;
+            max-width: 33%;
+        }
+    }
+
+    h4{
+        font-size: 15px;
+        color: #222222;
+        line-height: 1.5;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+        font-weight: 600;
+    }
+    li{
+        margin-bottom: 10px;
+    }
+    p,a{
+        font-size: 14px;
+        color: #555555;
+        line-height: 1.8;
+        max-width: 500px;
+        padding-bottom: 10px;
+    }
+    a
+    {text-transform: capitalize;
+        &:hover{
+            text-decoration: none;
+            color: #e65540;
+            transition: .3s ease-in-out;
+        }
+    } 
+
+    .social{
+        a{
+            color:#888888;
+            font-size: 18px;
+            margin-right: 20px;
+            &:hover{
+                color: #e65540;
+                transition: .3s ease-in-out;
+            }
+        }
+    }
+
+    .form-control{
+        font-size: 13px;
+        color: #555555;
+        border: none;
+        border-radius:0;
+        border-bottom: 1px solid #979797;
+        background-color: #f0f0f0;
+        padding-left: 0;
+        max-width: 300px;
+        &:focus{
+            box-shadow: none;
+            border-bottom: 1px solid #e65540;
+            transition: .4s ease-in-out;
+        }
+    }
+
+    .col-12 ,.col-lg-2{
+        margin-bottom: 30px;
+    }
+    .btn-primary
+    {
+        margin-top: 10px;
+        background-color:#111111;
+        border: none;
+        color: #fff;
+        border-radius: 23px;
+        text-transform: uppercase;
+        padding: 12px 40px;
+        &:hover{
+            border: none;
+            background-color: #e65540;
+            color: #fff;
+            transition: .2s ease-in-out;
+
+        }
+        &:active{
+            background-color:#e65540;
+            box-shadow: none;
+
+        }
+        &:focus{
+            box-shadow: none;
+        }
+    }
+    .btn-primary:not(:disabled):not(.disabled):active{
+        border: none;
+        box-shadow: none;
+        background-color: #e65540;
+    }
+ 
+
+    .lower-footer{
+        a{
+            padding-right: 5px;
+        }
+        .mt-4{
+            font-size: 13px;
+            color: #888888;
+        }
+    }
+}
