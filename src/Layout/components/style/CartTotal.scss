@@ -1,18 +1,19 @@
 .cart-total{
     padding:30px 50px 70px 50px;
-
+    @media (min-width: 1281px){
+        padding-right: 23.1rem;
+    }
     @media (max-width:600px) {
         padding: 50px 0;
     }
     .content {
         float: right;
         width: 440px;
-        border: 1px solid #c0bfbf;
+        border: 1px solid #eeeeee;
         border-radius: 5px;
         padding: 40px;
         .row{
-            padding: 0;
-            padding-bottom: 12px;
+            padding: 0 0 12px;
             margin-bottom: 12px;
             border-bottom: 1px dashed #c0bfbf;
         }

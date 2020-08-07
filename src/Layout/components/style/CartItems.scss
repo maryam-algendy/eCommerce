@@ -1,15 +1,13 @@
 .cart-items{
-        overflow-x: auto;
-        white-space: nowrap;
-        overflow-y: hidden;
-        padding: 70px;
-        padding-bottom: 0;
-        max-width: 1250px;
-        margin: auto;
-        @media (max-width:786px){
-            padding: 70px 30px;
-            
-        }
+    overflow-x: auto;
+    white-space: nowrap;
+    overflow-y: hidden;
+    padding: 70px 70px 0;
+    max-width: 1279px;
+    margin: auto;
+    @media (max-width:786px){
+        padding: 70px 30px;
+    }
 
     img{
         width: 90px;

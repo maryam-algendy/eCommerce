@@ -2,8 +2,8 @@ import React from 'react';
 import {Carousel} from "react-bootstrap";
 import {Link} from 'react-router-dom';
 
-
-const items =
+export default  (props) =>{
+    const items =
     [
         {
             paragraph: "paragraph1",
@@ -26,31 +26,25 @@ const items =
 
 
     ]
+    return (
+        <div className="Carousel">
+            <Carousel touch={true} wrap={true}>
+                {
+                    items.map((item, id) => {
+                        return (
+                            <Carousel.Item key={id} style={{ background: `url(${item.link}) center`, backgroundSize: "cover", height: "570px" }}>
+                                <Carousel.Caption>
+                                    <p style={{ animation: `${item.paragraph} 2s forwards` }}>women collection 2018</p>
+                                    <h2 style={{ animation: `${item.header} 2s forwards`, animationDelay: "2s" }}>new arrivals</h2>
+                                    <Link to="/" style={{ animation: `${item.btn} forwards 2s`, animationDelay: "3s" }}>shop now</Link>
+                                </Carousel.Caption>
+                            </Carousel.Item>
+                        )
 
-class carousel extends React.Component {
-    render() {
-        return (
-            <div className="Carousel">
-                <Carousel touch={true} wrap={true}>
-                    {
-                        items.map((item, id) => {
-                            return (
-                                <Carousel.Item key={id} style={{ background: `url(${item.link}) center`, backgroundSize: "cover", height: "570px" }}>
-                                    <Carousel.Caption>
-                                        <p style={{ animation: `${item.paragraph} 2s forwards` }}>women collection 2018</p>
-                                        <h2 style={{ animation: `${item.header} 2s forwards`, animationDelay: "2s" }}>new arrivals</h2>
-                                        <Link to="/" style={{ animation: `${item.btn} forwards 2s`, animationDelay: "3s" }}>shop now</Link>
-                                    </Carousel.Caption>
-                                </Carousel.Item>
-                            )
+                    })
+                }
+            </Carousel>
+        </div>
 
-                        })
-                    }
-                </Carousel>
-            </div>
-
-        )
-    }
+    )
 }
-
-export default carousel;

@@ -68,10 +68,11 @@ class Features extends React.Component {
                 <div key={id} className="feature-item p-3">
                     <div className="img-side mb-1">
                         <Image src={item.link}/>
-                        <div className="overlay"></div>
+                        <div className="overlay"> </div>
                         <Button>add to cart</Button>
                         <span className={item.class}>{item.span}</span>
-                        <i class="far fa-heart"></i>
+                        {/*todo: Replace heart icon with *** Favourite *** Block that contains SVG code and controlling it according to the status of the product and how user deals with it.*/}
+                        <i class="far fa-heart"> </i>
                     </div>
                     <div className="desc">
                         <Link to="/">{item.btn}</Link>
