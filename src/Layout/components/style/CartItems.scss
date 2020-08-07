@@ -1,0 +1,119 @@
+.cart-items{
+        overflow-x: auto;
+        white-space: nowrap;
+        overflow-y: hidden;
+        padding: 70px;
+        padding-bottom: 0;
+        @media (max-width:786px){
+            padding: 70px 30px;
+            
+        }
+
+    img{
+        width: 90px;
+    }
+    .row{
+        border: none;
+        padding: 0 30px;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        &:nth-child(3){
+            border-top:none;
+        }
+    }
+
+    .tb{
+        border: 1px solid #eeeeee;
+        justify-content: space-between;
+        padding: 30px;
+        color: #555555;
+        text-transform: capitalize;
+        margin-bottom: 0;
+        width: 1169px;
+        
+    .col-1,.col-3{
+        margin-top: 45px;
+    }
+    }
+    .th{
+        font-size: 13px;
+        color: #555555;
+        font-weight: 600;
+        text-transform: uppercase;
+        width: 1169px;
+
+    }
+
+    .btn-primary
+    {
+        background-color:#e6e6e6;
+        border: none;
+        color: #888888;
+        text-transform: uppercase;
+        line-height: 1.8;
+        min-width: 40px;
+        border-radius: 0;
+        &:hover{
+            border: none;
+            transition: .2s ease-in-out;
+
+        }
+        &:active{
+            background-color:#e65540;
+            box-shadow: none;
+            color: #fff;
+        }
+        &:focus{
+            box-shadow: none;
+        }
+    }
+    .btn-primary:not(:disabled):not(.disabled):active{
+        border: none;
+        box-shadow: none;
+        background-color: #e65540;
+    }
+
+    .quantity{
+        border: 2px solid #e6e6e6;
+        border-radius: 3px;
+        width: fit-content;
+        span{
+            padding: 18px;
+            color:#555555;
+        }
+    }
+    .confirm{
+        border: 1px solid #eeeeee;
+        border-top: 0;
+        padding: 30px;
+        .form-control {
+            display: inline-block;
+            width: 260px;
+            font-size: 13px;
+            padding: 20px;
+            &:focus{
+                box-shadow: none;
+                border: 1px solid #ced4da;            
+            }
+                @media (max-width:600px){
+                    display: block;
+                }
+    }
+    button{
+        margin-left: 40px;
+        background-color: #111111;
+        color: #fff;
+        border-radius: 23px;
+        padding: 10px 40px;
+        font-size: 15px;
+        text-transform: uppercase;
+        @media (max-width:600px){
+            margin-top: 20px;
+        }
+        &:hover{
+            background-color: #e65540;
+        }
+    }
+}
+
+}

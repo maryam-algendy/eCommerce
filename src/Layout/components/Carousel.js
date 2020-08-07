@@ -1,5 +1,6 @@
 import React from 'react';
-import { Carousel, Button } from "react-bootstrap";
+import {Carousel} from "react-bootstrap";
+import {Link} from 'react-router-dom';
 
 
 const items =
@@ -38,7 +39,7 @@ class carousel extends React.Component {
                                     <Carousel.Caption>
                                         <p style={{ animation: `${item.paragraph} 2s forwards` }}>women collection 2018</p>
                                         <h2 style={{ animation: `${item.header} 2s forwards`, animationDelay: "2s" }}>new arrivals</h2>
-                                        <Button style={{ animation: `${item.btn} forwards 2s`, animationDelay: "3s" }}>shop now</Button>
+                                        <Link to="/" style={{ animation: `${item.btn} forwards 2s`, animationDelay: "3s" }}>shop now</Link>
                                     </Carousel.Caption>
                                 </Carousel.Item>
                             )

@@ -1,5 +1,6 @@
 import React from 'react';
-import {Button,Image} from "react-bootstrap";
+import {Image} from "react-bootstrap";
+import { Link } from 'react-router-dom';
 
 const items=
 [
@@ -30,10 +31,10 @@ class Cart extends React.Component{
                         return(
                             <div key={id} className="row mb-2">
                                 <div className="col-3">
-                                    <Button><Image src={item.link}/><div className="overlay">x</div></Button>
+                                    <a href="/"><Image src={item.link}/><div className="overlay">x</div></a>
                                 </div>
                                 <div className="col-9">
-                                    <Button>{item.title}</Button>
+                                    <a href="/">{item.title}</a>
                                     <span>{item.cost}</span>
                                 </div>
                             </div>
@@ -44,10 +45,10 @@ class Cart extends React.Component{
                 <p className="text-right">Total: $75.00</p>
                 <div className="row">
                     <div className="col-6 pr-1">
-                        <Button>view cart</Button>
+                        <Link to='/cartDetails'>view cart</Link>
                     </div>
                     <div className="col-6 pl-1">
-                    <Button>check out</Button>
+                        <Link to='/'>check out</Link>
                     </div>
                 </div>
             </div>

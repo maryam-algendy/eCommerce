@@ -1,6 +1,7 @@
 import React from 'react';
 import {Image,Button} from "react-bootstrap";
 import AliceCarousel from 'react-alice-carousel';
+import {Link} from 'react-router-dom';
 
 const items=[
     {
@@ -73,7 +74,7 @@ class Features extends React.Component {
                         <i class="far fa-heart"></i>
                     </div>
                     <div className="desc">
-                        <Button>{item.btn}</Button>
+                        <Link to="/">{item.btn}</Link>
                         <del>{item.del}</del>
                         <span className={item.delClass}>{item.cost}</span>
                     </div>
