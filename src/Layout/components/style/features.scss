@@ -106,7 +106,7 @@
             margin-left: 5px;
             color: #e65540;
         }
-        button{
+        a{
             background-color: #fff;
             color: #555555;
             border-radius: 0;
@@ -119,18 +119,9 @@
                 color: #e65540;
                 background-color: #fff;
                 transition: .2s ease-in-out;
-    
+                text-decoration: none;
             }
-            &:active{
-                background-color:#fff !important;
-                color: #e65540 !important;
 
-            }
-            .btn-primary:not(:disabled):not(.disabled):active{
-                background-color: #fff;
-                color: #e65540;
-            
-            }
         }
     
     }

@@ -1,5 +1,6 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
+import {Link} from 'react-router-dom';
+
  const items=[
     {
         header:"Free Delivery Worldwide",
@@ -27,7 +28,7 @@ class Shipping extends React.Component{
                             return(
                                 <div key={id} className="col-sm-4 text-center py-2">
                                 <h4>{item.header}</h4>
-                                <Button className={item.btnHidden}>{item.btn}</Button>
+                                <Link to="/" className={item.btnHidden}>{item.btn}</Link>
                                 <p>{item.desc}</p>
                             </div>
                         )

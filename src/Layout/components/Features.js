@@ -1,6 +1,7 @@
 import React from 'react';
 import {Image,Button} from "react-bootstrap";
 import AliceCarousel from 'react-alice-carousel';
+import {Link} from 'react-router-dom';
 
 const items=[
     {
@@ -67,13 +68,14 @@ class Features extends React.Component {
                 <div key={id} className="feature-item p-3">
                     <div className="img-side mb-1">
                         <Image src={item.link}/>
-                        <div className="overlay"></div>
+                        <div className="overlay"> </div>
                         <Button>add to cart</Button>
                         <span className={item.class}>{item.span}</span>
-                        <i class="far fa-heart"></i>
+                        {/*todo: Replace heart icon with *** Favourite *** Block that contains SVG code and controlling it according to the status of the product and how user deals with it.*/}
+                        <i class="far fa-heart"> </i>
                     </div>
                     <div className="desc">
-                        <Button>{item.btn}</Button>
+                        <Link to="/">{item.btn}</Link>
                         <del>{item.del}</del>
                         <span className={item.delClass}>{item.cost}</span>
                     </div>

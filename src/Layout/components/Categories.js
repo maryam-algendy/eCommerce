@@ -1,5 +1,6 @@
 import React from "react";
-import {Image,Button} from "react-bootstrap";
+import {Image} from "react-bootstrap";
+import {Link} from 'react-router-dom';
 
 const cats=
 [
@@ -39,7 +40,7 @@ class Categories extends React.Component{
                     return(
                         <div key={id} className={cat.class}>
                     <Image src={cat.link}/>
-                    <Button>{cat.btn}</Button>
+                    <Link to="/">{cat.btn}</Link>
                 </div>
                     )
                 })
@@ -48,7 +49,7 @@ class Categories extends React.Component{
                     <div>
                         <h4>sign up & get 20% off</h4>
                         <p>Be the frist to know about the latest fashion news and get exclu-sive offers</p>
-                        <Button>sign up</Button>
+                        <Link to="/">sign up</Link>
                     </div>
                  </div>
         </div>
