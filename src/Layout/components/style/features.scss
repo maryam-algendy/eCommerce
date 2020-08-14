@@ -45,7 +45,7 @@
             top: 0;
             display: none;
         }
-        Button{
+        .add-to-cart{
             position: absolute;
             margin: auto;
             left: 0;
@@ -74,16 +74,50 @@
             display: none;
         }
 
-        i{
+        .heart-btn{
             position: absolute;
-            z-index: 3;
             top:10px;
             right: 10px;  
             display: none;
-            color: #fff;
+            padding: 0;
+            background:none;
+            &:hover{
+                background: none;
+            }
+            &:active{
+                background: none;
+            }
+            &:focus .heart{
+                fill: #e65540;
+                stroke: #e65540;
+            }
+            &:not(:disabled):not(.disabled):active{
+                background:none;
+            }
+
         }
 
-        &:hover Button{
+        .heart{
+
+            color: #fff;
+            width: 20px;
+            fill: none;
+            transition:  .3s ease-in-out;
+            stroke:#fff;
+            &:hover{
+                fill: #fff;
+                transition:  .3s ease-in-out;
+
+            }
+            &:active{
+                fill: #e65540;
+                stroke:#e65540
+            }
+
+
+        }
+
+        &:hover .add-to-cart{
             animation: btn .5s forwards;
             transition: .3s ease-in-out;
         }
@@ -92,7 +126,7 @@
             transition: .3s ease-in-out;
 
         }
-        &:hover i{
+        &:hover .heart-btn{
             display: block;
             transition: .3s ease-in-out;
 
@@ -176,3 +210,5 @@
         transition: .3s ease-in-out;
     }
 }
+
+

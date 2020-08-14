@@ -2,6 +2,7 @@ import React from 'react';
 import {Image,Button} from "react-bootstrap";
 import AliceCarousel from 'react-alice-carousel';
 import {Link} from 'react-router-dom';
+import Favourite from './Blocks/Favourite';
 
 const items=[
     {
@@ -69,10 +70,10 @@ class Features extends React.Component {
                     <div className="img-side mb-1">
                         <Image src={item.link}/>
                         <div className="overlay"> </div>
-                        <Button>add to cart</Button>
+                        <Button className="add-to-cart">add to cart</Button>
                         <span className={item.class}>{item.span}</span>
                         {/*todo: Replace heart icon with *** Favourite *** Block that contains SVG code and controlling it according to the status of the product and how user deals with it.*/}
-                        <i class="far fa-heart"> </i>
+                        <Favourite itemName={item.btn}/>
                     </div>
                     <div className="desc">
                         <Link to="/">{item.btn}</Link>
