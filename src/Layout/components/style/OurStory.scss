@@ -1,0 +1,50 @@
+.our-story{
+
+    .col-md-4{
+        div{
+            overflow: hidden;
+        }
+        img{
+            width: 100%;
+            transition:.5s ease-in-out;
+
+            &:hover{
+                transform:scale(1.1);
+                transition:.5s ease-in-out;
+
+            }
+
+    
+        }
+
+    }
+    .col-md-8{
+        padding: 20px;
+
+        h3{
+            font-size: 25px;
+            color: #333333;
+        }
+        p{
+            color: #888888;
+            margin-bottom: 25px;
+            letter-spacing: .6px;
+            font-size: 15px;
+        }
+        .l-border{
+            border-left:3px solid #e6e6e6;
+            padding-left: 30px;
+            padding-right: 30px;
+            margin-left: 10px;
+            margin-bottom: 0;
+            span{
+                padding-top: 15px;
+                display: block;
+                font-size: 13px;
+                color: #555555;
+
+            }
+        }
+    }
+
+}
