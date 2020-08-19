@@ -61,6 +61,7 @@
             left: 10px;
             font-size: 12px;
             padding: 5px 15px;
+            line-height: 1;
             border-radius: 10px;
             background-color: #66a8a6;
             color: #fff;
@@ -97,22 +98,7 @@
 
         }
 
-        .heart{
 
-            color: #fff;
-            width: 20px;
-            fill: none;
-            transition:  .3s ease-in-out;
-            stroke:#fff;
-            &:hover{
-                fill: #fff;
-                transition:  .3s ease-in-out;
-
-            }
-
-
-
-        }
 
         &:hover .add-to-cart{
             animation: btn .5s forwards;
