@@ -31,10 +31,10 @@ export default (props) =>{
                     return(
                         <div key={id} className="row mb-2">
                             <div className="col-3">
-                                <a href="/"><Image src={item.link}/><div className="overlay">x</div></a>
+                                <Link to="/"><Image src={item.link}/><div className="overlay">x</div></Link>
                             </div>
                             <div className="col-9">
-                                <a href="/">{item.title}</a>
+                                <Link to="/">{item.title}</Link>
                                 <span>{item.cost}</span>
                             </div>
                         </div>

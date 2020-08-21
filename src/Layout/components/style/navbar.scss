@@ -1,8 +1,13 @@
 .main-nav
 {
+  display: block;
+  @media (min-width:992px) {
+    margin-bottom: 82px;
+
+  }
 
   .navbar {
-    position: inherit;
+    position: fixed;
     background-color: #fff;
     box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.2);
     @media (max-width: 992px) {
