@@ -85,9 +85,13 @@ const items=[
     }
 ]
 
+
+  
   function valuetext(value) {
     return `${value}°C`;
   }
+
+ 
 
 const SaleContent =()=>{
     const [color, setColor] = useState("un-checked ");
@@ -152,6 +156,9 @@ const SaleContent =()=>{
                             <FormControl placeholder="Search Products..." aria-describedby="basic-addon1" />
                             <Button><i className="fas fa-search"></i></Button>
                         </InputGroup>                     
+
+
+
                         </div>
                     <div className="col-sm-6 col-md-8 col-lg-9">
                         <div className="show-result">
@@ -194,7 +201,7 @@ const SaleContent =()=>{
         })
       }   
                               </div>
-                              <div className="nav-pro">
+                              <div className="">
                                 <Link to="/">1</Link>
                                 <Link to="/">2</Link>
                               </div>
