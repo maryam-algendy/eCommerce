@@ -84,6 +84,43 @@ const items=[
         cost:"$92.50"
     }
 ]
+const selectColor=[
+    {   
+        id:0,
+        style:'#00bbec',
+        class:'un-checked'
+    },
+    {   
+        id:1,
+        style:'#2c6ed5',
+        class:'un-checked'
+    },
+    {   
+        id:2,
+        style:'#ffa037',
+        class:'un-checked'
+    },
+    {   
+        id:3,
+        style:'#ff5337',
+        class:'un-checked'
+    },
+    {   
+        id:4,
+        style:'#a88c77',
+        class:'un-checked'
+    },
+    {   
+        id:5,
+        style:'#393939',
+        class:'un-checked'
+    },
+    {   
+        id:6,
+        style:'#cccccc',
+        class:'un-checked'
+    }
+]
 
 
   
@@ -94,15 +131,17 @@ const items=[
  
 
 const SaleContent =()=>{
-    const [color, setColor] = useState("un-checked ");
+    const [color, setColor] = useState('un-checked');
 
-    const onbtnClick =()=>
+    const onbtnClick =(c,id)=>
     {
-      if (color==="un-checked "){
-        setColor("checked")
+      if (c==='un-checked'){
+        setColor('checked');
+        selectColor[id].class='checked';
       } 
       else{
-        setColor("un-checked ")  
+        setColor('un-checked')  ;
+        selectColor[id].class='un-checked';
       }
   }
 
@@ -145,13 +184,13 @@ const SaleContent =()=>{
                             <p>Range: <span className="start">${start}</span> - <span className="end">${end}</span></p>
                         </div>
                         <h4>color</h4>
-                        <button style={{backgroundColor:'#00bbec'}} className={color} onClick={onbtnClick}> </button>
-                        <button style={{backgroundColor:'#2c6ed5'}} className={color} onClick={onbtnClick}> </button>
-                        <button style={{backgroundColor:'#ffa037'}} className={color} onClick={onbtnClick}> </button>
-                        <button style={{backgroundColor:'#ff5337'}} className={color} onClick={onbtnClick}> </button>
-                        <button style={{backgroundColor:'#a88c77'}} className={color} onClick={onbtnClick}> </button>
-                        <button style={{backgroundColor:'#393939'}} className={color} onClick={onbtnClick}> </button>
-                        <button style={{backgroundColor:'#cccccc'}} className={color} onClick={onbtnClick}> </button>
+                        {
+                            selectColor.map((selected,id)=>{
+                                return(
+                                    <button key={id} style={{backgroundColor:`${selected.style}`}} className={selected.class} onClick={()=>onbtnClick(selected.class,id)}> </button> 
+                                )
+                            })
+                        }
                         <InputGroup className="mt-5">
                             <FormControl placeholder="Search Products..." aria-describedby="basic-addon1" />
                             <Button><i className="fas fa-search"></i></Button>
