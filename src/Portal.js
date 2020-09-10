@@ -12,25 +12,25 @@ import BlogDetails from './BlogDetails';
 import history from "./history";
 
 function Portal() {
-  return (
-    <div className="Portal">
-      <BrowserRouter history={history}>
-      <div>
-      <Navbar/>
-      <Switch>
-      <Route path='/' exact component={Home}/>
-      <Route path='/cart-details' exact component={CartDetails}/>
-      <Route path='/sale' exact component={Sale}/>
-      <Route path='/about' exact component={About}/>
-      <Route path='/contact' exact component={Contact}/>
-      <Route path='/blog' exact component={Blog}/>
-      <Route path='/blog-details/:id' exact component={BlogDetails}/>
-      </Switch>
-      <Footer/>
-      </div>
-      </BrowserRouter>
-    </div>
-  );
+	return (
+		<div className="Portal">
+			<BrowserRouter>
+			<div>
+			<Navbar/>
+			<Switch>
+			<Route path='/' exact component={Home}/>
+			<Route path='/cart-details' exact component={CartDetails}/>
+			<Route path='/sale' exact component={Sale}/>
+			<Route path='/about' exact component={About}/>
+			<Route path='/contact' exact component={Contact}/>
+			<Route path='/blog' exact component={Blog}/>
+			<Route path='/blog-details/:id' exact component={BlogDetails}/>
+			</Switch>
+			<Footer/>
+			</div>
+			</BrowserRouter>
+		</div>
+	);
 }
 
 export default Portal;

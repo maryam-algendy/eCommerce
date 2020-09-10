@@ -5,7 +5,8 @@ import BlogDetail from './Layout/components/BlogDetail'
 import {Link} from 'react-router-dom';
 
 
-function BlogDetails() {
+function BlogDetails(props) {
+  console.log(props);
     return (
       <div>
         <Header img={"blog.jpg"} name={"BLOG"}/>
