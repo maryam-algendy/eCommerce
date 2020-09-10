@@ -1,0 +1,138 @@
+.blog-detail{
+    padding-right: 50px;
+    margin-bottom: 80px;
+    h4{
+        font-size: 22px;
+        font-weight: 600;
+        color: #333333;
+        text-transform: capitalize;
+    }
+    .desc{
+        h4 {
+            padding: 40px 0 10px 0;
+            font-weight: 600;
+            a{
+                font-size: 26px;
+                color: #333333;
+                &:hover{
+                    color: #e65540;
+                    text-decoration:none;
+                    transition:.3s ease-in-out;
+                }
+            }
+           
+        }
+    }
+    span{
+        font-size: 13px;
+        color: #888888;
+    }
+    p{
+        line-height: 1.7;
+        color: #888888;
+        padding-top: 25px ;
+    }
+
+    .tags{
+        text-transform: capitalize;
+        margin: 40px 0;
+        span{
+            font-size: 15px;
+            color: #555555; 
+            padding-right: 20px;
+        }
+        a{
+            color: #888888;
+            font-size: 13px;
+            border:1px #888888 solid;
+            padding: 5px 15px;
+            display: inline-block;
+            border-radius: 23px;
+            margin: 3px;
+            margin-left:0;
+            line-height: 1.5;
+            &:hover{
+                color: #e65540;
+                text-decoration:none;
+                transition:.3s ease-in-out;
+                border-color: #e65540;
+            }
+        }
+    }
+    .form-control{
+        
+        font-size: 13px;
+        color: #555555;
+        line-height: 1.8;
+        margin-bottom: 20px;
+        padding: 24px;
+        border-radius: 2px;
+        max-width: 260px;
+        &:focus{
+            border:1px solid #ced4da;
+            box-shadow: none;
+        }
+    }
+    textarea.form-control{
+        max-width: 100%;
+    }
+    .btn-primary
+    {
+        margin-top: 10px;
+        background-color:#111111;
+        border: none;
+        color: #fff;
+        border-radius: 20px;
+        text-transform: uppercase;
+        padding: 10px 20px;
+        font-size: 15px;
+        &:hover{
+            border: none;
+            background-color: #e65540;
+            color: #fff;
+            transition: .2s ease-in-out;
+
+        }
+        &:active{
+            background-color:#e65540;
+            box-shadow: none;
+
+        }
+        &:focus{
+            box-shadow: none;
+        }
+    }
+    .btn-primary:not(:disabled):not(.disabled):active{
+        border: none;
+        box-shadow: none;
+        background-color: #e65540;
+    }
+}
+.pass{
+    color: #888888;
+    font-size: 13px;
+    text-transform: capitalize;
+    i{
+        margin:0 5px 0 10px;
+        color: #555555;
+
+    }
+    a{
+        color: #555555;
+        font-size: 13px;
+        margin-right: 10px;
+        &:hover {
+            color: #e65540;
+            text-decoration:none;
+            transition:.3s ease-in-out;
+        }
+        &:hover i {
+            color: #e65540;
+            transition:.3s ease-in-out;
+        }
+
+    }
+
+
+
+}

@@ -1,42 +1,19 @@
 import React from "react";
 import {Image} from "react-bootstrap";
 import {Link} from 'react-router-dom';
-
-const cats=
-[
-    {
-        class:"item-1",
-        link:"cat-1.jpg",
-        btn:"dresses"
-    },
-    {
-        class:"item-2",
-        link:"cat-2.jpg",
-        btn:"watches"
-    },
-    {
-        class:"item-3",
-        link:"cat-3.jpg",
-        btn:"bags"
-    },
-    {
-        class:"item-4",
-        link:"cat-4.jpg",
-        btn:"sunglasses"
-    },
-    {
-        class:"item-5",
-        link:"cat-5.jpg",
-        btn:"footwear"
-    }
-]
+import {connect} from 'react-redux';
+import {fetchCategories} from '../../action';
 
 class Categories extends React.Component{
+        componentDidMount(){
+            this.props.fetchCategories();
+        }
+
     render(){
         return(
         <div className="categories container py-5">
             {
-                cats.map((cat,id)=>{
+                this.props.cats.map((cat,id)=>{
                     return(
                         <div key={id} className={cat.class}>
                     <Image src={cat.link}/>
@@ -56,5 +33,10 @@ class Categories extends React.Component{
      )
     }
 };
+const mapStateToProps=(state)=>{
+    return{
+        cats:state.categories
+    }
+}
 
-export default Categories;
+export default connect(mapStateToProps,{fetchCategories}) (Categories);

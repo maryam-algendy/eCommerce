@@ -7,14 +7,16 @@ const products=[
         link:'features-2.jpg',
         name:'Men Tshirt',
         cost:'36.00',
-        quantity:'1'
+        quantity:'1',
+        total:'36.00'
     },
     {
         id:'1',
         link:'features-3.jpg',
         name:'Mug Adventure',
         cost:'16.00',
-        quantity:'1'
+        quantity:'1',
+        total:'16.00'
     }
 
 ]
@@ -24,15 +26,15 @@ const CartItems= ()=>{
     function countUp(q,id){
         const newQuantity=parseInt(q)
         setQuantity(newQuantity+1);
-        products[id].quantity=newQuantity+1
-
+        products[id].quantity=newQuantity+1;
+        products[id].total=(products[id].cost*products[id].quantity).toFixed(2)
     }
     const countDown=(q,id) =>{
         if (quantity>1){
           const newQuantity=parseInt(q);
             setQuantity(newQuantity-1);
             products[id].quantity=newQuantity-1;
-
+            products[id].total=(products[id].total-products[id].cost).toFixed(2);
         }
     }
     
@@ -52,7 +54,7 @@ const CartItems= ()=>{
                         <div key={id} className="row tb">
                             <div className="col-2"><Image src={product.link}/></div>
                             <div className="col-3">{product.name}</div>
-                            <div className="col-1">{product.cost}</div>
+                            <div className="col-1">${product.cost}</div>
                             <div className="col-3">
                                 <div className="quantity">
                                     <Button onClick={() => countDown(product.quantity,product.id)}>-</Button>
@@ -60,7 +62,7 @@ const CartItems= ()=>{
                                     <Button onClick={() => countUp(product.quantity,product.id)}>+</Button>
                                 </div>
                             </div>
-                            <div className="col-1">$36.00</div>
+                            <div className="col-1">${product.total}</div>
                         </div>
                     )
                   

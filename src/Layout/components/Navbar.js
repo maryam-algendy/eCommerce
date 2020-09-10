@@ -26,8 +26,8 @@ export default () => {
                     </Link>
                     <Link to="/sale">Shop</Link>
                     <Link to="/sale" className="sale">Sale</Link>
-                    <Link to="cartDetails">Features</Link>
-                    <Link to ='/'>Blog</Link>
+                    <Link to="/cart-details">Features</Link>
+                    <Link to ='/blog'>Blog</Link>
                     <Link to ='/about'>About</Link>
                     <Link to ='/contact'>Contact</Link>
 
