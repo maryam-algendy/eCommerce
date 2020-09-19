@@ -9,7 +9,7 @@ export default () => {
         // upper nav bar
         <div className="main-nav">
             <Navbar fixed="top" expand="lg" className="px-lg-5 pb-0 pt-3 py-lg-4">
-            <Navbar.Brand href="/"><Image className="pl-3 pb-3 pb-lg-0" src="logo.png"/></Navbar.Brand>
+            <Navbar.Brand href="/"><Image className="pl-3 pb-3 pb-lg-0" src="/logo.png"/></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
             <div className="row mt-2 mt-lg-none">
@@ -26,8 +26,8 @@ export default () => {
                     </Link>
                     <Link to="/sale">Shop</Link>
                     <Link to="/sale" className="sale">Sale</Link>
-                    <Link to="cartDetails">Features</Link>
-                    <Link to ='/'>Blog</Link>
+                    <Link to="/cart-details">Features</Link>
+                    <Link to ='/blog'>Blog</Link>
                     <Link to ='/about'>About</Link>
                     <Link to ='/contact'>Contact</Link>
 
@@ -36,12 +36,12 @@ export default () => {
             </div>
             </Navbar.Collapse>
             <div className="nav-icons">
-                    <Link to ='/'><Image src="user-icon.png"/></Link>
+                    <Link to ='/'><Image src="/user-icon.png"/></Link>
                     <Button className="cart-sec" onClick={() => {
                         cartVisibility === "non-visible" ? setCartVisibility("visible") : setCartVisibility("non-visible");
                         console.log(cartVisibility)
                     }}>
-                        <Image src="cart-icon.png"/>
+                        <Image src="/cart-icon.png"/>
                         <span className="cart-num">0</span>
                         <Cart visibilityStatus={cartVisibility} />
                     </Button>

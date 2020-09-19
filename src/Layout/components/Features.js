@@ -3,68 +3,75 @@ import {Image,Button} from "react-bootstrap";
 import AliceCarousel from 'react-alice-carousel';
 import {Link} from 'react-router-dom';
 import Favourite from './Blocks/Favourite';
+import {connect} from 'react-redux';
+import {fetchFeatures} from '../../action';
 
-const items=[
-    {
-        link:"features-1.jpg",
-        span:"new",
-        btn:"Hershel supply co 251",
-        cost:"$75.00"
-    },
-    {
-        link:"features-2.jpg",
-        class:"none",
-        btn:"Denim jacket blue",
-        cost:"$92.50"
-    },
-    {
-        link:"features-3.jpg",
-        class:"none",
-        btn:"Coach slim eastone black",
-        cost:"$165.90"
-    },
-    {
-        link:"features-4.jpg",
-        span:"sale",
-        class:"sale",
-        btn:"Frayed denim shorts",
-        cost:"$15.90",
-        del:" $29.5 ",
-        delClass:"delClass"
-    },
-    {
-        link:"features-1.jpg",
-        span:"sale",
-        btn:"Hershel supply co 251",
-        cost:"$75.00"
-    },
-    {
-        link:"features-2.jpg",
-        class:"none",
-        btn:"Denim jacket blue",
-        cost:"$92.50"
-    },
-    {
-        link:"features-3.jpg",
-        class:"none",
-        btn:"Coach slim eastone black",
-        cost:"$165.90"
-    },
-    {
-        link:"features-4.jpg",
-        span:"sale",
-        class:"sale",
-        btn:"Frayed denim shorts",
-        cost:"$15.90",
-        del:" $29.5 ",
-        delClass:"delClass"
-    }
-]
+// const items=[
+//     {
+//         link:"features-1.jpg",
+//         span:"new",
+//         btn:"Hershel supply co 251",
+//         cost:"$75.00"
+//     },
+//     {
+//         link:"features-2.jpg",
+//         class:"none",
+//         btn:"Denim jacket blue",
+//         cost:"$92.50"
+//     },
+//     {
+//         link:"features-3.jpg",
+//         class:"none",
+//         btn:"Coach slim eastone black",
+//         cost:"$165.90"
+//     },
+//     {
+//         link:"features-4.jpg",
+//         span:"sale",
+//         class:"sale",
+//         btn:"Frayed denim shorts",
+//         cost:"$15.90",
+//         del:" $29.5 ",
+//         delClass:"delClass"
+//     },
+//     {
+//         link:"features-1.jpg",
+//         span:"sale",
+//         btn:"Hershel supply co 251",
+//         cost:"$75.00"
+//     },
+//     {
+//         link:"features-2.jpg",
+//         class:"none",
+//         btn:"Denim jacket blue",
+//         cost:"$92.50"
+//     },
+//     {
+//         link:"features-3.jpg",
+//         class:"none",
+//         btn:"Coach slim eastone black",
+//         cost:"$165.90"
+//     },
+//     {
+//         link:"features-4.jpg",
+//         span:"sale",
+//         class:"sale",
+//         btn:"Frayed denim shorts",
+//         cost:"$15.90",
+//         del:" $29.5 ",
+//         delClass:"delClass"
+//     }
+// ]
 
 class Features extends React.Component {
 
+    componentDidMount(){
+        this.props.fetchFeatures();
+        console.log(this.props.fetchFeatures())
+    }
+    
     state = {
-        galleryItems: items.map((item,id) =>{
+        galleryItems: this.props.items.map((item,id) =>{
             return(
                 <div key={id} className="feature-item p-3">
                     <div className="img-side mb-1">
@@ -84,6 +91,7 @@ class Features extends React.Component {
             )
         }),
       }
+
     
       responsive = {
         0: { items: 1 },
@@ -109,4 +117,10 @@ class Features extends React.Component {
       }
 };
 
-export default Features;
+const mapStateToProps=(state)=>{
+    return{
+        items:state.features
+    }
+}
+
+export default connect(mapStateToProps,{fetchFeatures})(Features);
