@@ -42,7 +42,7 @@ export default function reducer (state = initialState, action) {
         case FETCH_BLOG_FEATURES:
             return {...state, blogFeatures: action.payload};
         case FETCH_BLOG_ARCHIVE:
-            return {...state, blogArchive: action.payload};
+            return {...state , blogArchive: action.payload};
         default:
         return state;
     }

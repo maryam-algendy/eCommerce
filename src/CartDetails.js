@@ -6,7 +6,7 @@ import CartItems from './Layout/components/CartItems'
 function CartDetails() {
     return (
       <div>
-        <Header img={"carousel-2.jpg"} name={"cart"}/>
+        <Header img={"/carousel-2.jpg"} name={"cart"}/>
         <CartItems/>
         <CartTotal/>
       </div>

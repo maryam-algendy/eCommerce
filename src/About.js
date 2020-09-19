@@ -5,7 +5,7 @@ import OurStory from './Layout/components/OurStory'
 function About() {
     return (
       <div>
-        <Header img={"contact.jpg"} name={"about"}/>
+        <Header img={"/contact.jpg"} name={"about"}/>
         <OurStory/>
       </div>
     );

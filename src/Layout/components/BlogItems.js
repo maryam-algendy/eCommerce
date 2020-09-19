@@ -18,7 +18,7 @@ export default () => {
                 return(
                     <div key={id} className="blog-item">
                         <div className="img-side">
-                            <Image src={item.link}/>
+                        <Link to={`/blog-details/${item.id}`}><Image src={item.link}/></Link>
                             <span>{item.date}</span>
                         </div>
                         <div className="desc">
