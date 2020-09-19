@@ -79,7 +79,6 @@ class Features extends React.Component {
                         <div className="overlay"> </div>
                         <Button className="add-to-cart">add to cart</Button>
                         <span className={item.class}>{item.span}</span>
-                        {/*todo: Replace heart icon with *** Favourite *** Block that contains SVG code and controlling it according to the status of the product and how user deals with it.*/}
                         <Favourite itemName={item.btn}/>
                     </div>
                     <div className="desc">
