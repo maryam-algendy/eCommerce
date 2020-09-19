@@ -25,7 +25,7 @@ export default () => {
                             <h4><Link to={`/blog-details/${item.id}`}>{item.title}</Link></h4>
                             <span>By Admin | Cooking, Food | 8 Comments</span>
                             <p>{item.desc}</p>
-                            <Link to={`/blog-details/${item.id}`}>Continue Reading <i className="fas fa-long-arrow-alt-right"></i></Link>
+                            <Link to={`/blog-details/${item.id}`}>Continue Reading <i className="fas fa-long-arrow-alt-right"> </i></Link>
                         </div>
                     </div>
                 )
