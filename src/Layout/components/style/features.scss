@@ -1,6 +1,18 @@
 @import "react-alice-carousel/lib/scss/alice-carousel.scss";
-
+.features{
+    padding: 90px 0;
+    @media (min-width:1200px) {
+        max-width: 1200px;
+    }
+    h3{
+        font-size: 30px;
+    color: #222222;
+    text-transform: uppercase;
+    font-weight: 600;
+    }
+}
 .feature-item{
+
     img{
         width: 100%;
     }

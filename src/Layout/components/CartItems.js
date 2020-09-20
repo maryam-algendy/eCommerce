@@ -1,27 +1,15 @@
-import React ,{useState} from 'react';
+import React ,{useState,useEffect} from 'react';
 import {Image, Button,FormControl} from 'react-bootstrap';
-
-const products=[
-    {
-        id:'0',
-        link:'features-2.jpg',
-        name:'Men Tshirt',
-        cost:'36.00',
-        quantity:'1',
-        total:'36.00'
-    },
-    {
-        id:'1',
-        link:'features-3.jpg',
-        name:'Mug Adventure',
-        cost:'16.00',
-        quantity:'1',
-        total:'16.00'
-    }
-
-]
+import {useSelector, useDispatch} from 'react-redux';
+import {fetchCartProducts} from '../../action';
 
 const CartItems= ()=>{
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(fetchCartProducts());
+    }, [dispatch]);
+    const products = useSelector(state => state.cartProducts);
+
     const [quantity,setQuantity]=useState(1);
     function countUp(q,id){
         const newQuantity=parseInt(q)
@@ -57,15 +45,14 @@ const CartItems= ()=>{
                             <div className="col-1">${product.cost}</div>
                             <div className="col-3">
                                 <div className="quantity">
-                                    <Button onClick={() => countDown(product.quantity,product.id)}>-</Button>
+                                    <Button onClick={() => countDown(product.quantity,id)}>-</Button>
                                     <span id="val">{products[id].quantity}</span>
-                                    <Button onClick={() => countUp(product.quantity,product.id)}>+</Button>
+                                    <Button onClick={() => countUp(product.quantity,id)}>+</Button>
                                 </div>
                             </div>
                             <div className="col-1">${product.total}</div>
                         </div>
                     )
-                  
                 })
             }
             <div className="row confirm">

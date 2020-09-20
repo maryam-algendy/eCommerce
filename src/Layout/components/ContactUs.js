@@ -4,7 +4,7 @@ import Map from './Blocks/Map'
 
  const ContactUs=()=> {
   return (
-    <div className="contact-us p-5">
+    <div className="contact-us container px-xl-0 p-5">
         <div className="row">
             <div className="col-md-6">
                 <Map/>

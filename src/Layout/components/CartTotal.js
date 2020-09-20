@@ -4,7 +4,7 @@ import {Form, Button} from 'react-bootstrap'
 class CartTotal extends React.Component{
     render(){
         return(
-            <div className="cart-total">
+            <div className="cart-total container px-xl-0">
                 <div className=" content">
                     <h5>CART TOTALS</h5>
                     <div className="row">

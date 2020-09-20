@@ -7,7 +7,8 @@ import {
     FETCH_SHIPPING,
     FETCH_BLOG_ITEMS,
     FETCH_BLOG_FEATURES,
-    FETCH_BLOG_ARCHIVE
+    FETCH_BLOG_ARCHIVE,
+    FETCH_SELECTED_COLOR
 } from './types';
 
 
@@ -20,7 +21,8 @@ const initialState={
     shipping:[],
     blogItems:[],
     blogFeatures:[],
-    blogArchive:[]
+    blogArchive:[],
+    selectedColor:[]
 }
 
 export default function reducer (state = initialState, action) {
@@ -43,6 +45,8 @@ export default function reducer (state = initialState, action) {
             return {...state, blogFeatures: action.payload};
         case FETCH_BLOG_ARCHIVE:
             return {...state , blogArchive: action.payload};
+        case FETCH_SELECTED_COLOR:
+            return {...state , selectedColor: action.payload};
         default:
         return state;
     }
