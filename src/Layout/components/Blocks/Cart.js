@@ -1,10 +1,26 @@
-import React,{useEffect} from 'react';
+import React,{useEffect, useRef, useState} from 'react';
 import {Image} from "react-bootstrap";
 import { Link } from 'react-router-dom';
 import {useSelector, useDispatch} from 'react-redux';
 import {fetchBlogFeatures} from '../../../action';
 
 export default (props) =>{
+    const [display ,setDisplay]=useState("d-block")
+    const node =useRef();
+    useEffect(()=>{
+        document.addEventListener("mousedown",handelClick);
+        return()=>{
+            document.removeEventListener("mousedown",handelClick)
+        }
+    },[])
+
+    const handelClick=e=>{
+        if(node.current.contains(e.target)){
+            return;
+        }
+        setDisplay("d-none");
+    }
+
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(fetchBlogFeatures());
@@ -12,7 +28,7 @@ export default (props) =>{
 
     const items = useSelector(state => state.blogFeatures)
     return (
-        <div className={"cart text-left p-3 py-4 "+props.visibilityStatus}>
+        <div ref={node} className={`cart text-left p-3 py-4 ${display}`+props.visibilityStatus }>
             {
                (items || []).slice(0,3).map((item,id)=>{
                     return(

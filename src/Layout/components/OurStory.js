@@ -4,7 +4,7 @@ import {Image} from 'react-bootstrap';
 class OurStory extends React.Component{
     render(){
         return(
-            <div className="our-story py-5 px-2 px-lg-5">
+            <div className="our-story container px-xl-0 py-5 px-2">
                 <div className="row">
                     <div className="col-md-4">
                         <div>

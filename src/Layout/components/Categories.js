@@ -1,19 +1,21 @@
-import React from "react";
+import React ,{useEffect}from "react";
 import {Image} from "react-bootstrap";
 import {Link} from 'react-router-dom';
-import {connect} from 'react-redux';
 import {fetchCategories} from '../../action';
+import {useSelector ,useDispatch} from 'react-redux'
 
-class Categories extends React.Component{
-        componentDidMount(){
-            this.props.fetchCategories();
-        }
+export default()=>{
 
-    render(){
+const dispatch = useDispatch();
+useEffect(()=>{
+    dispatch(fetchCategories());
+},[dispatch])
+const cats= useSelector(state=>state.categories)
+
         return(
         <div className="categories container py-5">
             {
-                this.props.cats.map((cat,id)=>{
+               cats.map((cat,id)=>{
                     return(
                         <div key={id} className={cat.class}>
                     <Image src={cat.link}/>
@@ -31,12 +33,5 @@ class Categories extends React.Component{
                  </div>
         </div>
      )
-    }
+    
 };
-const mapStateToProps=(state)=>{
-    return{
-        cats:state.categories
-    }
-}
-
-export default connect(mapStateToProps,{fetchCategories}) (Categories);

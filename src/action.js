@@ -2,7 +2,8 @@ import eCommerce from './api/eCommerce';
 
 import { FETCH_CAROUSEL,FETCH_FEATURES,FETCH_PRODUCTS,
   FETCH_CART_PRODUCTS,FETCH_CATEGORIES,FETCH_SHIPPING,
-  FETCH_BLOG_ITEMS,FETCH_BLOG_FEATURES,FETCH_BLOG_ARCHIVE} from './types';
+  FETCH_BLOG_ITEMS,FETCH_BLOG_FEATURES,FETCH_BLOG_ARCHIVE,
+  FETCH_SELECTED_COLOR} from './types';
 
 export const fetchCarousel = () => async dispatch => {
   const response = await eCommerce.get('/carosel');
@@ -41,3 +42,8 @@ export const fetchBlogArchive = () => async dispatch => {
   const response = await eCommerce.get('/blog-archive');
   dispatch({ type:FETCH_BLOG_ARCHIVE, payload: response.data});
 }; 
+export const fetchSelectedColor = () => async dispatch => {
+  const response = await eCommerce.get('/selectedColor');
+  dispatch({ type:FETCH_SELECTED_COLOR, payload: response.data});
+}; 
+

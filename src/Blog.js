@@ -7,8 +7,8 @@ function Blog() {
     return (
       <div>
         <Header img={"/blog.jpg"} name={"BLOG"}/>
-        <div className="blog-content py-5 px-3">
-                <div className="row px-xl-5">
+        <div className="blog-content container px-xl-0 py-5 px-3">
+                <div className="row">
                         <BlogItems/>
                         <BlogNav/>
                         
