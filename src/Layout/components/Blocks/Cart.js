@@ -2,7 +2,7 @@ import React,{useEffect, useRef, useState} from 'react';
 import {Image} from "react-bootstrap";
 import { Link } from 'react-router-dom';
 import {useSelector, useDispatch} from 'react-redux';
-import {fetchBlogFeatures} from '../../../action';
+import {fetchCartProducts} from '../../../action';
 
 export default (props) =>{
     const [display ,setDisplay]=useState("d-block")
@@ -23,22 +23,22 @@ export default (props) =>{
 
     const dispatch = useDispatch();
     useEffect(() => {
-        dispatch(fetchBlogFeatures());
+        dispatch(fetchCartProducts());
     }, [dispatch]);
 
-    const items = useSelector(state => state.blogFeatures)
+    const items = useSelector(state => state.cartProducts)
     return (
         <div ref={node} className={`cart text-left p-3 py-4 ${display}`+props.visibilityStatus }>
             {
-               (items || []).slice(0,3).map((item,id)=>{
+               (items || []).map((item,id)=>{
                     return(
                         <div key={id} className="row mb-2">
                             <div className="col-3">
                                 <Link to="/"><Image src={item.link}/><div className="overlay">x</div></Link>
                             </div>
                             <div className="col-9">
-                                <Link to="/">{item.title}</Link>
-                                <span>{item.cost}</span>
+                                <Link to="/">{item.name}</Link>
+                                <span>{item.quantity}x{item.cost}</span>
                             </div>
                         </div>
                     )

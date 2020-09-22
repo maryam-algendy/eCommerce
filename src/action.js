@@ -11,7 +11,7 @@ export function  fetchProducts () {
       response.forEach(item => {
         products.push(item.val())
       })
-      dispatch({type: "FETCH_PRODUCTS", payload: products})
+      dispatch({type: FETCH_PRODUCTS, payload: products})
     })
   }
 }
@@ -26,7 +26,7 @@ export function fetchCarousel() {
       response.forEach(item=>{
         carousel.push(item.val())
       })
-      dispatch({type:"FETCH_CAROUSEL", payload: carousel})
+      dispatch({type:FETCH_CAROUSEL, payload: carousel})
     })
   }
 }
@@ -39,7 +39,7 @@ export function fetchCartProducts() {
       response.forEach(item=>{
         cartProducts.push(item.val())
       })
-      dispatch({type:"FETCH_CART_PRODUCTS", payload: cartProducts})
+      dispatch({type:FETCH_CART_PRODUCTS, payload: cartProducts})
     })
   }
 
@@ -53,7 +53,7 @@ export function fetchFeatures() {
       response.forEach(item=>{
         features.push(item.val())
       })
-      dispatch({type:"FETCH_FEATURES", payload: features})
+      dispatch({type:FETCH_FEATURES, payload: features})
     })
   }
 }
@@ -65,7 +65,7 @@ export function fetchShipping() {
       response.forEach(item=>{
         shipping.push(item.val())
       })
-      dispatch({type:"FETCH_SHIPPING", payload: shipping})
+      dispatch({type:FETCH_SHIPPING, payload: shipping})
     })
   }
 }
@@ -77,7 +77,7 @@ export function fetchCategories() {
       response.forEach(item=>{
         categories.push(item.val())
       })
-      dispatch({type:"FETCH_CATEGORIES", payload: categories})
+      dispatch({type:FETCH_CATEGORIES, payload: categories})
     })
   }
 
@@ -90,7 +90,7 @@ export function fetchBlogItems() {
       response.forEach(item=>{
         blogItems.push(item.val())
       })
-      dispatch({type:"FETCH_BLOG_ITEMS", payload: blogItems})
+      dispatch({type:FETCH_BLOG_ITEMS, payload: blogItems})
     })
   }
 }
@@ -102,7 +102,7 @@ export function fetchBlogFeatures() {
       response.forEach(item=>{
         blogFeatures.push(item.val())
       })
-      dispatch({type:"FETCH_BLOG_FEATURES", payload: blogFeatures})
+      dispatch({type:FETCH_BLOG_FEATURES, payload: blogFeatures})
     })
   }
 }
@@ -114,7 +114,7 @@ export function fetchBlogArchive() {
       response.forEach(item=>{
         blogArchive.push(item.val())
       })
-      dispatch({type:"FETCH_BLOG_ARCHIVE", payload: blogArchive})
+      dispatch({type:FETCH_BLOG_ARCHIVE, payload: blogArchive})
     })
   }
 }
@@ -126,7 +126,7 @@ export function fetchSelectedColor() {
       response.forEach(item=>{
         selectedColor.push(item.val())
       })
-      dispatch({type:"FETCH_SELECTED_COLOR", payload: selectedColor})
+      dispatch({type:FETCH_SELECTED_COLOR, payload: selectedColor})
     })
   }
 }
