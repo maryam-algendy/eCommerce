@@ -13,6 +13,7 @@ import history from "./history";
 import LogIn from "./LogIn";
 import SignUp from "./SignUp";
 import InvalidRoute from "./Layout/components/Blocks/InvalidRoute";
+import ResetPassword from "./Layout/components/ResetPassword";
 
 function Portal() {
 
@@ -37,6 +38,7 @@ function Portal() {
 						<Route path='/blog-details/:id' exact component={BlogDetails}/>
 						<Route path='/log-in' exact component={(props) => <LogIn handleUserStatus={(e) => handleUserStatus(e)} {...props}/>}/>
 						<Route path='/sign-up' exact component={(props) => <SignUp handleUserStatus={(e) => handleUserStatus(e)} {...props} />}/>
+						<Route path='/reset' exact component={(props) => <ResetPassword handleUserStatus={(e) => handleUserStatus(e)} {...props} />}/>
 						<Route path='*' exact component={(props) => <InvalidRoute handleUserStatus={(e) => handleUserStatus(e)} {...props} />}/>
 					</Switch>
 					{user ? null : <Footer/>}

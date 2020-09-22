@@ -3,7 +3,7 @@ import {Image,Button} from "react-bootstrap";
 import AliceCarousel from 'react-alice-carousel';
 import {Link} from 'react-router-dom';
 import Favourite from './Blocks/Favourite';
-import {fetchFeatures} from '../../action';
+import {fetchFeatures} from '../../redux/action';
 import {useDispatch ,useSelector} from "react-redux";
 
 
@@ -14,27 +14,25 @@ export default () => {
     useEffect(() => {
         dispatch(fetchFeatures());
     }, [dispatch])
-    
 
-    
-      const responsive = {
+    const responsive = {
         0: { items: 1 },
         600: { items: 2 },
         867: { items: 3 },
         922: { items: 4 },
-      }
+    }
     
-        return (
-            <div className="container features px-5 px-xl-0">
-                <h3 className="text-center mb-5">FEATURED PRODUCTS</h3>
-          <AliceCarousel
+    return (
+        <div className="container features px-5 px-xl-0">
+            <h3 className="text-center mb-5">FEATURED PRODUCTS</h3>
+            <AliceCarousel
             responsive={responsive}
             autoPlayDirection="ltr"
             autoPlayInterval={5000}
             autoPlay={true}
             mouseTrackingEnabled={true}
             disableAutoPlayOnAction={true}
-          >
+            >
               {(features || []).map((item, id) => {
                   return (
                     <div key={id} className="feature-item p-3">
@@ -50,11 +48,10 @@ export default () => {
                              <del>{item.del}</del>
                              <span className={item.delClass}>{item.cost}</span>
                          </div>
-                     </div>
-                   
+                    </div>
                   )
               })}
-          </AliceCarousel>
-            </div>
-        )
+            </AliceCarousel>
+        </div>
+    )
 };

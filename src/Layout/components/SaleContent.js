@@ -4,8 +4,8 @@ import { Button,Form,FormControl,InputGroup,Image} from 'react-bootstrap';
 import Favourite from './Blocks/Favourite';
 import {Typography,Slider} from '@material-ui/core'
 import {useSelector, useDispatch} from 'react-redux';
-import {fetchProducts,fetchSelectedColor} from '../../action';
-import {postCart} from "../../action";
+import {fetchProducts,fetchSelectedColor} from '../../redux/action';
+import {postCart} from "../../redux/action";
 function valuetext(value) {
     return `${value}°C`;
   }

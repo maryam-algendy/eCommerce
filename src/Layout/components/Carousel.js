@@ -2,7 +2,7 @@ import React from 'react';
 import {Carousel} from "react-bootstrap";
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
-import {fetchCarousel} from '../../action';
+import {fetchCarousel} from '../../redux/action';
 
 class carousel extends React.Component {
     componentDidMount(){

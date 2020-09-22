@@ -36,7 +36,7 @@ export default () => {
             </div>
             </Navbar.Collapse>
             <div className="nav-icons">
-                    <Link to ='/'><Image src="/user-icon.png"/></Link>
+                    <Link to ='/log-in'><Image src="/user-icon.png"/></Link>
                     <Button className="cart-sec" onClick={() => {
                         cartVisibility === "non-visible" ? setCartVisibility("visible") : setCartVisibility("non-visible");
                         console.log(cartVisibility)

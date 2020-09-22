@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
-import {fetchShipping} from '../../action';
+import {fetchShipping} from '../../redux/action';
 
 class Shipping extends React.Component{
     componentDidMount(){

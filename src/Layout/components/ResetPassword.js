@@ -2,25 +2,28 @@ import React from 'react';
 import {Button, Form} from "react-bootstrap";
 import {Link} from  "react-router-dom";
 
-const Register= () =>{
+const LogInForm= (props) =>{
+
+    if(props.location.pathname === "/reset") {
+        props.handleUserStatus(true);
+    }
+
     return(
         <div className="log-in">
             <div className="text-center container">
                 <div className="ll">
-                    <h2>log in</h2>
-                    <p>Please fill in the information bellow:</p>
+                    <h2>Reset Password</h2>
+                    <p>Please enter your e-mail and check your inbox</p>
                     <Form>
-                        <Form.Control  placeholder="Full Name"/>
-                        <Form.Control placeholder="Phone Number"/>
                         <Form.Group controlId="formBasicEmail">
                             <Form.Control type="email" placeholder="Email Address"/>
                         </Form.Group>
-                        <Form.Control  placeholder="Password"/>
-                        <Button type="submit">create my account</Button>
+                        <Button type="submit">send</Button>
                     </Form>
+                    <span>or <Link to="/log-in">Login</Link></span>
                 </div>
             </div>
         </div>
     )
 }
-export default Register;
+export default LogInForm;

@@ -8,15 +8,15 @@
 @import "./Shipping.scss";
 @import "./Footer.scss";
 @import "./Header.scss";
-@import "./CartTotal.scss";
-@import "./CartItems.scss";
+@import "../Blocks/style/CartTotal";
+@import "../Blocks/style/CartItems";
 @import "./OurStory.scss";
 @import "./SaleContent.scss";
 @import "./ContactUs.scss";
 @import "./BlogNav.scss";
 @import "./BlogItems.scss";
 @import "./BlogInformation.scss";
-@import "./login.scss";
+@import "../Blocks/style/login";
 
 
 @font-face {

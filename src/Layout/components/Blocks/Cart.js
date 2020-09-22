@@ -2,7 +2,7 @@ import React,{useEffect, useRef, useState} from 'react';
 import {Image} from "react-bootstrap";
 import { Link } from 'react-router-dom';
 import {useSelector, useDispatch} from 'react-redux';
-import {fetchCartProducts} from '../../../action';
+import {fetchCartProducts} from '../../../redux/action';
 
 export default (props) =>{
     const [display ,setDisplay]=useState("d-block")

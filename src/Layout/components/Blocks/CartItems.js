@@ -1,7 +1,7 @@
 import React ,{useState,useEffect} from 'react';
 import {Image, Button,FormControl} from 'react-bootstrap';
 import {useSelector, useDispatch} from 'react-redux';
-import {fetchCartProducts} from '../../action';
+import {fetchCartProducts} from '../../../redux/action';
 
 const CartItems= ()=>{
     const dispatch = useDispatch();

@@ -85,15 +85,18 @@
           }
         }
       }
-      button{
+      a{
+        display: block;
         padding: 0;
         position: absolute;
-        top: 7px;
-        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 10px;
         background: none;
         color: #555555;
         font-size: 12px;
-        text-transform: lowercase;
+        text-transform: capitalize;
+        font-family: "Medium";
         margin-bottom: 0;
         &:hover{
           color: #e65540;

@@ -1,4 +1,4 @@
-import {database} from "./Firebase/config";
+import {database} from "../Firebase/config";
 import { FETCH_CAROUSEL,FETCH_FEATURES,FETCH_PRODUCTS,
   FETCH_CART_PRODUCTS,FETCH_CATEGORIES,FETCH_SHIPPING,
   FETCH_BLOG_ITEMS,FETCH_BLOG_FEATURES,FETCH_BLOG_ARCHIVE,

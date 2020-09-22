@@ -2,7 +2,7 @@ import React from 'react';
 import {InputGroup,Button,FormControl,Image} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
-import {fetchBlogFeatures,fetchBlogArchive} from '../../action';
+import {fetchBlogFeatures,fetchBlogArchive} from '../../redux/action';
 
 
 class BlogNav extends React.Component{

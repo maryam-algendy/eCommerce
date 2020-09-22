@@ -1,5 +1,5 @@
 import React from "react";
-import Register from "./Layout/components/Register";
+import Register from "./Layout/components/Blocks/Register";
 
 
 function SignUp(props) {

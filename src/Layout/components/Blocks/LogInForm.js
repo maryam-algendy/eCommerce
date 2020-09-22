@@ -14,8 +14,8 @@ const LogInForm= () =>{
                          <Form.Control type="email" placeholder="Email Address"/>
                      </Form.Group>
                      <div className="pass">
-                         <Form.Control placeholder="Password"/>
-                         <Button>forget password</Button>
+                         <Form.Control type="password" placeholder="Password"/>
+                         <Link to="/reset">forget password ?</Link>
                      </div>
                      <Button type="submit">send</Button>
                  </Form>

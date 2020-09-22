@@ -5,7 +5,7 @@ import * as serviceWorker from './serviceWorker';
 import {createStore ,applyMiddleware,compose} from "redux";
 import {Provider} from "react-redux";
 import reduxThunk from "redux-thunk";
-import reducer from './reducers';
+import reducer from './redux/reducers';
 
 // global style
 import 'bootstrap-v4-rtl/dist/css/bootstrap-rtl.min.css';
