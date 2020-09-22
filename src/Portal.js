@@ -9,7 +9,6 @@ import Sale from './Sale';
 import About from './About';
 import Blog from './Blog'
 import BlogDetails from './BlogDetails';
-import history from "./history";
 import LogIn from "./LogIn";
 import SignUp from "./SignUp";
 import InvalidRoute from "./Layout/components/Blocks/InvalidRoute";

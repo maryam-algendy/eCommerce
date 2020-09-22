@@ -18,9 +18,15 @@ export default () => {
                     <i className="fas fa-chevron-right d-lg-none text-right"> </i>
                         <div className="home-dd">
                             <ul className="list-unstyled mb-0 ">
-                                <li><Link to="/">homepage v1</Link></li>
-                                <li><Link to="/">homepage v2</Link></li>
-                                <li><Link to="/">homepage v3</Link></li>
+                                <li>
+                                    <Link to="/">homepage v1</Link>
+                                </li>
+                                <li>
+                                    <Link to="/">homepage v2</Link>
+                                </li>
+                                <li>
+                                    <Link to="/">homepage v3</Link>
+                                </li>
                             </ul>
                         </div>
                     </Link>
