@@ -8,12 +8,74 @@
 @import "./Shipping.scss";
 @import "./Footer.scss";
 @import "./Header.scss";
-@import "./CartTotal.scss";
-@import "./CartItems.scss";
+@import "../Blocks/style/CartTotal";
+@import "../Blocks/style/CartItems";
 @import "./OurStory.scss";
 @import "./SaleContent.scss";
 @import "./ContactUs.scss";
 @import "./BlogNav.scss";
 @import "./BlogItems.scss";
 @import "./BlogInformation.scss";
+@import "../Blocks/style/login";
 
+
+@font-face {
+  font-family: "Thin";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Montserrat Thin"), url("../../assets/fonts/Montserrat-Thin.woff") format("woff"),
+}
+
+@font-face {
+  font-family: "ExtraLight";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../assets/fonts/Montserrat-ExtraLight.woff") format("woff"),
+}
+
+@font-face {
+  font-family: "Light";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../assets/fonts/Montserrat-Light.woff") format("woff"),
+}
+
+@font-face {
+  font-family: "Medium";
+  src: local("Montserrat Medium"), url("../../assets/fonts/Montserrat-Medium.woff") format("woff"),
+}
+
+@font-face {
+  font-family: "Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Montserrat Regular"), url("../../assets/fonts/Montserrat-Regular.woff") format("woff"),
+}
+
+@font-face {
+  font-family: "SemiBold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Montserrat SemiBold"), url("../../assets/fonts/Montserrat-SemiBold.woff") format("woff"),
+}
+
+@font-face {
+  font-family: "Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../assets/fonts/Montserrat-Bold.woff") format("woff"),
+}
+
+@font-face {
+  font-family: "ExtraBold";
+  font-style: normal;
+  font-weight: bolder;
+  src: url("../../assets/fonts/Montserrat-ExtraBold.woff") format("woff"),
+}
+
+@font-face {
+  font-family: "Black";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../assets/fonts/Montserrat-Black.woff") format("woff"),
+}

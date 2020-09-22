@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import {Image} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 import {useSelector, useDispatch} from 'react-redux';
-import {fetchBlogItems} from '../../action';
+import {fetchBlogItems} from '../../redux/action';
 
 export default () => {
     const dispatch = useDispatch();

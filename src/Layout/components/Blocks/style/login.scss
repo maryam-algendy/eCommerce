@@ -1,0 +1,127 @@
+.log-in{
+  background-color: #f0f0f0;
+  .container {
+    position: relative;
+    height: 100vh;
+    max-width: 600px;
+    padding: 0;
+  }
+  .ll{
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: fit-content;
+    width: 100%;
+    h2{
+      font-size: 30px;
+      color: #222222;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    p{
+      font-size: 15px;
+      color: #333333;
+      margin-bottom: 30px;
+    }
+
+    .form-control{
+      font-size: 13px;
+      color: #555555;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      padding: 24px;
+      border-radius: 2px;
+      background:#f0f0f0 ;
+      &:focus{
+        border:1px solid #ced4da;
+        box-shadow: none;
+      }
+    }
+    .btn-primary
+    {
+      margin-top: 10px;
+      background-color:#111111;
+      border: none;
+      color: #fff;
+      border-radius: 23px;
+      text-transform: uppercase;
+      padding: 12px 60px;
+      margin-bottom: 20px;
+      &:hover{
+        border: none;
+        background-color: #e65540;
+        color: #fff;
+        transition: .2s ease-in-out;
+      }
+      &:active{
+        background-color:#e65540;
+        box-shadow: none;
+
+      }
+      &:focus{
+        box-shadow: none;
+      }
+    }
+    .btn-primary:not(:disabled):not(.disabled):active{
+      border: none;
+      box-shadow: none;
+      background-color: #e65540;
+    }
+    .pass{
+      position: relative;
+      background: #fff;
+      .input-group {
+        border: 1px solid #ced4da;
+        padding: 12px;
+
+        .form-control {
+          border: none;
+          font-size: 13px;
+
+          &:focus {
+            border: none;
+            box-shadow: none;
+          }
+        }
+      }
+      a{
+        display: block;
+        padding: 0;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 10px;
+        background: none;
+        color: #555555;
+        font-size: 12px;
+        text-transform: capitalize;
+        font-family: "Medium";
+        margin-bottom: 0;
+        &:hover{
+          color: #e65540;
+          background: none;
+        }
+        &:active{
+          color: #e65540;
+          background: none;
+        }
+        }
+      .btn-primary:not(:disabled):not(.disabled):active {
+        color: #e65540;
+        background: none;
+      }
+    }
+    span{
+      padding-top: 30px;
+      color: #555555;
+      a{
+        color: #333333;
+      &:hover{
+        text-decoration: none;
+        color: #e65540;
+      }
+      }
+    }
+  }
+}
