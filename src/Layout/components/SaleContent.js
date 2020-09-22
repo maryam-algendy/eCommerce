@@ -5,9 +5,9 @@ import Favourite from './Blocks/Favourite';
 import {Typography,Slider} from '@material-ui/core'
 import {useSelector, useDispatch} from 'react-redux';
 import {fetchProducts,fetchSelectedColor} from '../../action';
+import {postCart} from "../../action";
 
-  
-  function valuetext(value) {
+function valuetext(value) {
     return `${value}°C`;
   }
 
@@ -115,14 +115,15 @@ import {fetchProducts,fetchSelectedColor} from '../../action';
                         <div className="img-side mb-1">
                             <Image src={item.link}/>
                             <div className="overlay"> </div>
-                            <Button className="add-to-cart">add to cart</Button>
+                            <Button className="add-to-cart" onClick={()=>postCart({id: item.id, quantity: 1, link:item.link, name: item.btn, cost:item.cost, total:item.cost},item.id)} >
+                                add to cart</Button>
                             <span className={item.class}>{item.span}</span>
                             <Favourite itemName={item.btn}/>
                         </div>
                         <div className="desc">
                             <Link to="/">{item.btn}</Link>
                             <del>{item.del}</del>
-                            <span className={item.delClass}>{item.cost}</span>
+                            <span className={item.delClass}>${item.cost}</span>
                         </div>
                     </div>
                 )
