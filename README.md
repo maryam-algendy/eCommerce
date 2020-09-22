@@ -4,6 +4,7 @@
 * [General info](#general-info)
 * [Copyrights](#copyrights)
 * [Setup](#setup)
+* [LICENSE](#license)
 
 
 ## General info
@@ -26,3 +27,6 @@ $ cd eCommerce-core\
 $ yarn
 $ yarn start
 ```
+
+## LICENSE
+The content of this project itself is licensed under the [GNU Affero General Public License](https://github.com/mohamedMghazi/eCommerce-core/blob/master/LICENSE.md)
