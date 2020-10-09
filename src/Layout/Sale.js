@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from './Layout/components/Header';
-import SaleContent from './Layout/components/SaleContent';
+import Header from './components/Header';
+import SaleContent from './components/SaleContent';
 
 function Sale() {
     return (

@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from './Layout/components/Header';
-import BlogNav from './Layout/components/BlogNav';
-import BlogInformation from './Layout/components/BlogInformation'
+import Header from './components/Header';
+import BlogNav from './components/BlogNav';
+import BlogInformation from './components/BlogInformation'
 import {Link} from 'react-router-dom';
 
 

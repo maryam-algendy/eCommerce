@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from './Layout/components/Header';
-import BlogItems from './Layout/components/BlogItems';
-import BlogNav from './Layout/components/BlogNav';
+import Header from './components/Header';
+import BlogItems from './components/BlogItems';
+import BlogNav from './components/BlogNav';
 
 function Blog() {
     return (

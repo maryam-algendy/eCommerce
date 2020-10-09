@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from './Layout/components/Header';
-import CartTotal from './Layout/components/Blocks/CartTotal';
-import CartItems from './Layout/components/Blocks/CartItems'
+import Header from './components/Header';
+import CartTotal from './components/Blocks/CartTotal';
+import CartItems from './components/Blocks/CartItems'
 
 function CartDetails() {
     return (
