@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from './Layout/components/Header';
-import Apps from './Layout/components/ContactUs'
+import Header from './components/Header';
+import Apps from './components/ContactUs'
 function Contact() {
     return (
       <div>

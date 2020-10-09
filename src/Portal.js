@@ -2,17 +2,15 @@ import React, {useState} from 'react';
 import {BrowserRouter ,Route,Switch} from 'react-router-dom';
 import Navbar from "./Layout/components/Navbar";
 import Footer from './Layout/components/Footer';
-import CartDetails from './CartDetails';
-import Home from './Home';
-import Contact from './Contact';
-import Sale from './Sale';
-import About from './About';
-import Blog from './Blog'
-import BlogDetails from './BlogDetails';
-import LogIn from "./LogIn";
-import SignUp from "./SignUp";
+import CartDetails from './Layout/CartDetails';
+import Home from './Layout/Home';
+import Contact from './Layout/Contact';
+import Sale from './Layout/Sale';
+import About from './Layout/About';
+import Blog from './Layout/Blog'
+import BlogDetails from './Layout/BlogDetails';
 import InvalidRoute from "./Layout/components/Blocks/InvalidRoute";
-import ResetPassword from "./Layout/components/ResetPassword";
+import Account from "./Layout/Account";
 
 function Portal() {
 
@@ -35,9 +33,7 @@ function Portal() {
 						<Route path='/contact' exact component={Contact}/>
 						<Route path='/blog' exact component={Blog}/>
 						<Route path='/blog-details/:id' exact component={BlogDetails}/>
-						<Route path='/log-in' exact component={(props) => <LogIn handleUserStatus={(e) => handleUserStatus(e)} {...props}/>}/>
-						<Route path='/sign-up' exact component={(props) => <SignUp handleUserStatus={(e) => handleUserStatus(e)} {...props} />}/>
-						<Route path='/reset' exact component={(props) => <ResetPassword handleUserStatus={(e) => handleUserStatus(e)} {...props} />}/>
+						<Route path='/user/:page' exact component={(props) => <Account handleUserStatus={(e) => handleUserStatus(e)} {...props} />}/>
 						<Route path='*' exact component={(props) => <InvalidRoute handleUserStatus={(e) => handleUserStatus(e)} {...props} />}/>
 					</Switch>
 					{user ? null : <Footer/>}

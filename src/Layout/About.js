@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from './Layout/components/Header';
-import OurStory from './Layout/components/OurStory'
+import Header from './components/Header';
+import OurStory from './components/OurStory'
 
 function About() {
     return (
