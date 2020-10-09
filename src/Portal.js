@@ -13,7 +13,7 @@ import LogIn from "./LogIn";
 import SignUp from "./SignUp";
 import InvalidRoute from "./Layout/components/Blocks/InvalidRoute";
 import ResetPassword from "./Layout/components/ResetPassword";
-
+import history from "./history";
 function Portal() {
 
 	const [user, setUser] = useState(false);
