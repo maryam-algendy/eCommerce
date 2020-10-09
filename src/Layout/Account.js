@@ -4,11 +4,18 @@ import {Link} from  "react-router-dom";
 import {firebase} from "../Firebase/config";
 import InvalidRoute from "./components/Blocks/InvalidRoute";
 
+/**
+ * Function that handles UserLogin.
+ * @param {email, password} - User Data to check if user recorded.
+ * @param props - param that received from parent router page to handle status onSuccess.
+ * @returns { User Status } - Send User Data to firebase auth system to check if user registered & get user status and full user data.
+**/
+
 const LogInForm= (props) =>{
-    console.log(props)
+
     const [form,setForm]=useState({});
     const [error,setError]=useState("");
-    console.log(error)
+
     const errs={
         "There is no user record corresponding to this identifier. The user may have been deleted.":"there is no account registered with this date",
         "The email address is badly formatted.":"Please enter a valid email",
@@ -16,15 +23,17 @@ const LogInForm= (props) =>{
     }
 
     const HandleUserLogIn =()=>{
-        firebase.auth().signInWithEmailAndPassword(form.email, form.password).then(()=>{
+        firebase.auth().signInWithEmailAndPassword(form.email, form.password)
+            .then(()=>{
             setError("Log in successfully");
-            props.history.push("/")
-        }).catch(function(error) {
+
+            props.history.push("/");
+        })
+            .catch((error) => {
             setError(errs[error.message]);
-            console.log(error)
         });
     }
-    var color="";
+    let color="";
     if (error==="Log in successfully"){
         color="green";
     }
@@ -59,6 +68,11 @@ const LogInForm= (props) =>{
     )
 }
 
+/**
+ * Function that handles UserRegister.
+ * @param {email, password, full_name} - User Data to create new account for him.
+ * @returns { Register Status } - Send User Data to firebase auth system to create new account.
+**/
 
 const Register= () =>{
     const [form,setForm]=useState({});
@@ -132,21 +146,25 @@ const Register= () =>{
     )
 }
 
+/**
+ * Function that handles ForgetPassword.
+ * @param {email} - User email to check if user recorded & send changePasswordEmail.
+ * @param props - param that received from parent router page to handle status onSuccess.
+ * @returns { void }
+ **/
 
-const ResetPasswrd= (props) =>{
+const ResetPassword= (props) =>{
 
     if(props.location.pathname === "/reset") {
         props.handleUserStatus(true);
     }
     const [form,setForm]=useState({});
     const [error,setError]=useState("");
-    console.log(error)
+
     const errs={
         "There is no user record corresponding to this identifier. The user may have been deleted.":"there is no account registered with this date",
         "The email address is badly formatted.":"Please enter a valid email",
     }
-
-
 
     const HandleResetPassword =()=>{
         firebase.auth().sendPasswordResetEmail(form.email).then(()=>{
@@ -157,7 +175,7 @@ const ResetPasswrd= (props) =>{
             console.log(error)
         });
     }
-    var color="";
+    let color="";
     if (error==="Success! check your inbox"){
         color="green";
     }
@@ -189,8 +207,14 @@ const ResetPasswrd= (props) =>{
     )
 }
 
+/**
+ * Function that handles UserRoutes.
+ * @param {Route PathName} - The PathName required.
+ * @param props - param that received from BrowserRouter to handle status if this page should not have Navbar & footer and handling user behaviour.
+ * @returns { Selected Component } - Show specific function that required by user.
+**/
+
 export default (props) => {
-    console.log(props)
     const location = props.location.pathname;
 
     if(location === "/user/log-in" || location === "/user/sign-up" || location === "/user/reset") {
@@ -202,10 +226,10 @@ export default (props) => {
             return <LogInForm {...props} />
 
         case "/user/sign-up":
-            return <Register p={props} />
+            return <Register />
 
         case "/user/reset":
-            return <ResetPasswrd {...props} />
+            return <ResetPassword {...props} />
 
         default:
             return <InvalidRoute />
