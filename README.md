@@ -4,7 +4,7 @@
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Copyrights](#copyrights)
-* [Setup](#setup)
+* [Preview](#preview)
 * [LICENSE](#license)
 
 
@@ -25,15 +25,8 @@ Project is created with:
 * It is not allowed to use this project without [my](https://www.linkedin.com/in/maryam-algendy-68199b163/) permission
 
 
-## Setup
-To run this project, install it locally using [Yarn](https://classic.yarnpkg.com/en/docs/install/#debian-stable):
-
-```
-$ git clone https://github.com/maryam-algendy/eCommerce.git
-$ cd eCommerce-core\
-$ yarn
-$ yarn start
-```
+## Preview
+https://e-commerce-core.vercel.app/
 
 
 ## LICENSE
