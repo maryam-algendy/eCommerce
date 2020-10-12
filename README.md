@@ -22,7 +22,7 @@ Project is created with:
 To run this project, install it locally using [Yarn](https://classic.yarnpkg.com/en/docs/install/#debian-stable):
 
 ```
-$ git clone https://github.com/mohamedMghazi/eCommerce-core.git
+$ git clone https://github.com/maryam-algendy/eCommerce.git
 $ cd eCommerce-core\
 $ yarn
 $ yarn start
