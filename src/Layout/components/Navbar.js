@@ -6,7 +6,6 @@ import {Link} from 'react-router-dom';
 export default () => {
     const [cartVisibility, setCartVisibility] = useState("non-visible");
     return (
-        // upper nav bar
         <div className="main-nav">
             <Navbar fixed="top" expand="lg" className="px-lg-5 pb-0 pt-3 py-lg-4">
             <Navbar.Brand href="/"><Image className="pl-3 pb-3 pb-lg-0" src="/logo.png"/></Navbar.Brand>
