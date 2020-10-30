@@ -48,21 +48,6 @@ class CartTotal extends React.Component{
                     </div>
                     <Button>proceed to checkout</Button>
                 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 <div className="clear"></div>      
             </div>
         )

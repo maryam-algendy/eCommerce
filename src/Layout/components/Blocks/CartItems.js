@@ -1,7 +1,7 @@
 import React ,{useState,useEffect} from 'react';
 import {Image, Button,FormControl} from 'react-bootstrap';
 import {useSelector, useDispatch} from 'react-redux';
-import {fetchCartProducts} from '../../../redux/action';
+import {fetchCartProducts, postCart} from '../../../redux/action';
 
 const CartItems= ()=>{
     const dispatch = useDispatch();
@@ -45,9 +45,15 @@ const CartItems= ()=>{
                             <div className="col-1">${product.cost}</div>
                             <div className="col-3">
                                 <div className="quantity">
-                                    <Button onClick={() => countDown(product.quantity,id)}>-</Button>
+                                    <Button onClick={() => {
+                                        countDown(product.quantity, id)
+                                        postCart({id: product.id, quantity: product.quantity, link:product.link, name: product.name, cost:product.cost, total:product.cost},id)
+                                    }}>-</Button>
                                     <span id="val">{products[id].quantity}</span>
-                                    <Button onClick={() => countUp(product.quantity,id)}>+</Button>
+                                    <Button onClick={() => {
+                                        countUp(product.quantity, id);
+                                        postCart({id: product.id, quantity: product.quantity, link:product.link, name: product.name, cost:product.cost, total:product.cost},id)
+                                    }}>+</Button>
                                 </div>
                             </div>
                             <div className="col-1">${product.total}</div>

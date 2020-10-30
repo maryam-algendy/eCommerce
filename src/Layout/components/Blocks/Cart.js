@@ -30,7 +30,7 @@ export default (props) =>{
     return (
         <div ref={node} className={`cart text-left p-3 py-4 ${display}`+props.visibilityStatus }>
             {
-               (items || []).map((item,id)=>{
+               (items || []).slice(items.length-3,items.length).map((item,id)=>{
                     return(
                         <div key={id} className="row mb-2">
                             <div className="col-3">
