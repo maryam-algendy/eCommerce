@@ -3,7 +3,7 @@ import {Image} from "react-bootstrap";
 import Countdown from "react-countdown";
 import {Link} from 'react-router-dom';
 
-const countDownDate = new Date("october 1, 2020 00:00:00").getTime();
+const countDownDate = new Date("june 15, 2021 00:00:00").getTime();
 const now = new Date().getTime();
 
 const renderer1 = ({days}) => {
@@ -40,7 +40,7 @@ class Counter extends React.Component{
                                 <Link to="/">Gafas sol Hawkers one</Link>
                                 <del>$29.50</del>
                                 <span className="cost">$15.90</span>
-                                <div className="row pt-0 pt-md-5">
+                                <div className="row pt-0 pt-3 pt-xl-5">
                                 <div className="col-3 day">
                                 <Countdown date={Date.now() +( countDownDate-now)} renderer={renderer1}  />
                                         <p>days</p>

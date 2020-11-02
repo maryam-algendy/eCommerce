@@ -61,11 +61,9 @@ const CartItems= ()=>{
                     )
                 })
             }
-            <div className="row confirm">
-                <div>
+            <div className="confirm">
                 <FormControl placeholder="Coupon Code"/>
                 <Button>APPLY COUPON</Button>
-                </div>
                 <Button>UPDATE CART</Button>
             </div>
         </div>

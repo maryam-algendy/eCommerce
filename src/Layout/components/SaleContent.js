@@ -9,7 +9,6 @@ import {postCart} from "../../redux/action";
 function valuetext(value) {
     return `${value}°C`;
 }
-
 export default ()=>{
 
     const dispatch=useDispatch();
@@ -23,8 +22,6 @@ export default ()=>{
     const selectedColor=useSelector( state=> state.selectedColor)
 
     const [color, setColor] = useState('un-checked');
-    console.log(color)
-
     const onbtnClick =(c,id)=>
     {
     if (c==='un-checked'){
@@ -36,14 +33,12 @@ export default ()=>{
         selectedColor[id].class='un-checked';
     }
 }
-
     const [value, setValue] = useState([50, 200]);
     const handleChange = (event, newValue) => {
     setValue(newValue);
     };
     const start=value[0];
     const end=value[1];
-
         return(
             <div className="sale-content container py-5 px-2 px-lg-0">
                 <div className="row">
