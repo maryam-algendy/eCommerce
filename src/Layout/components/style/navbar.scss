@@ -97,7 +97,9 @@
 
   .sale {
     color: red;
-
+    @media (max-width: 992px) {
+      color: #fff;
+    }
     &:hover {
       color: red;
     }
